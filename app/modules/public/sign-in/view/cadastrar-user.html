@@ -1,0 +1,112 @@
+<section>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">{{'DATA_PESSOAIS' | translate}}</h4>
+        </div>
+        <div class="panel-body"><!-- begin div panelbody -->
+        <div class="form-group">
+            <form name="cadastrarUserCtrl.formCadastroUser" class="form form-horizontal" ng-class="form-group" novalidate>
+                <div class="form-group">
+                    <div class="col-md-9 col-md-push-3">
+                        <label class="radio-inline limpo">
+                            <label class="limpo"><input name="{{'TIPO_PESSOA' | translate}}" type="radio" ng-class="form-control" ng-model="cadastrarUserCtrl.pessoa.tipoPessoa" ng-value="cadastrarUserCtrl.PESSOA_FISICA" required/> {{'PF_PESSOA_FISICA' | translate}}</label>
+                        </label>
+                        <label class="radio-inline limpo">
+                            <label class="limpo"><input name="{{'TIPO_PESSOA' | translate}}" type="radio" ng-class="form-control" ng-model="cadastrarUserCtrl.pessoa.tipoPessoa" ng-value="cadastrarUserCtrl.PESSOA_JURIDICA" required/> {{'PJ_PESSOA_JURIDICA' | translate}}</label>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pronome-tratamento" class="col-md-3 control-label obrigatorio">{{'PRONOME_DE_TRATAMENTO' | translate}}</label>
+                    <div class="col-md-6">
+                        <select id="pronome-tratamento" name="pronome-tratamento" class="form-control" ng-model="cadastrarUserCtrl.pessoa.pronomeTratamento"
+                        ng-options="pronomeTratamento as pronomeTratamento.name for pronomeTratamento in cadastrarUserCtrl.pronomeTratamentos"
+                        ng-disabled="cadastrarUserCtrl.pessoa.tipoPessoa == cadastrarUserCtrl.PESSOA_JURIDICA"
+                        ng-required="cadastrarUserCtrl.pessoa.tipoPessoa == cadastrarUserCtrl.PESSOA_FISICA">
+                        <option value="">{{"SELECT" | translate}}</option></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name-completo" class="col-md-3 control-label obrigatorio">{{'NOME_COMPLETO' | translate}}</label>
+                    <div class="col-md-9">
+                        <input id="name-completo" name="name-completo" type="text" class="form-control" ng-model="cadastrarUserCtrl.pessoa.name" required maxlength="150" capitalize/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-md-3 control-label obrigatorio">{{'EMAIL' | translate}}</label>
+                    <div class="col-md-9">
+                        <input id="email" name="email" type="email" class="form-control" ng-model="cadastrarUserCtrl.pessoa.email" maxlength="150" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-9 col-md-push-3">
+                        <p class="form-control-static"><i>{{'DETALHAMENTO_CAMPO_EMAIL' | translate}}</i></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmar-email" class="col-md-3 control-label obrigatorio">{{'CONFIRMAR_EMAIL' | translate}}</label>
+                    <div class="col-md-9">
+                        <input id="confirmar-email" name="confirmar-email" type="email" class="form-control" ng-model="cadastrarUserCtrl.confirmarEmail" maxlength="150" required/>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pais-residencia" class="col-md-3 control-label obrigatorio">{{'PAIS_DE_RESIDENCIA' | translate}}</label>
+                    <div class="col-md-3">
+                        <select id="pais-residencia" name="pais-residencia" class="form-control" ng-model="cadastrarUserCtrl.pessoa.pais" required
+                        ng-options="pais as pais.name for pais in cadastrarUserCtrl.paisAtivos"></select>
+                    </div>
+                    <label for="uf" class="col-md-2 control-label" ng-class="{'obrigatorio' : cadastrarUserCtrl.isPaisBrasil()}">{{'UF' | translate}}</label>
+                    <div class="col-md-3">
+                        <select id="uf" name="uf" class="form-control" ng-model="cadastrarUserCtrl.pessoa.uf"
+                        ng-options="uf as uf.name for uf in cadastrarUserCtrl.ufs"
+                        ng-disabled="!cadastrarUserCtrl.isPaisBrasil()"
+                        ng-required="cadastrarUserCtrl.isPaisBrasil()">
+                        <option value="">{{"SELECT" | translate}}</option></select>
+                    </div>
+
+                </div>
+                <div class="form-group" ng-if="cadastrarUserCtrl.pessoa.tipoPessoa == cadastrarUserCtrl.PESSOA_FISICA">
+                    <label for="cpf" class="col-md-3 control-label doisPontos">{{'CPF' | translate}}</label>
+                    <div class="col-md-3">
+                        <input id="cpf" name="cpf" type="text" class="form-control" ng-model="cadastrarUserCtrl.pessoa.cpf" ui-br-cpf-mask/>
+                    </div>
+                </div>
+                <div class="form-group" ng-if="cadastrarUserCtrl.pessoa.tipoPessoa == cadastrarUserCtrl.PESSOA_JURIDICA">
+                    <label for="cnpj" class="col-md-3 doisPontos">{{'CNPJ' | translate}}</label>
+                    <div class="col-md-3">
+                        <input id="cnpj" name="cnpj" type="text" class="form-control" ng-model="cadastrarUserCtrl.pessoa.cnpj" ui-br-cnpj-mask/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="grau-instrucao" class="col-md-3 control-label doisPontos">{{'GRAU_DE_INSTRUCAO' | translate}}</label>
+                    <div class="col-md-6">
+                        <select id="grau-instrucao" name="grau-instrucao" class="form-control" ng-model="cadastrarUserCtrl.pessoa.grauInstrucao"
+                        ng-options="grauInstrucao as grauInstrucao.name for grauInstrucao in cadastrarUserCtrl.grauInstrucoes"
+                        ng-disabled="cadastrarUserCtrl.pessoa.tipoPessoa == cadastrarUserCtrl.PESSOA_JURIDICA">
+                        <option value="">{{"SELECT" | translate}}</option></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-md-3 control-label obrigatorio">{{'PASSWORD' | translate}}</label>
+                    <div class="col-md-9">
+                        <input id="password" name="password" type="password" class="form-control" ng-model="cadastrarUserCtrl.passwordUserExternal.password"
+                        minlength="6" maxlength="32" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmar-password" class="col-md-3 control-label obrigatorio">{{'CONFIRMAR_PASSWORD' | translate}}</label>
+                    <div class="col-md-9">
+                        <input id="confirmar-password" name="confirmar-password" type="password" class="form-control" ng-model="cadastrarUserCtrl.confirmarPassword"
+                        minlength="6" maxlength="32" required/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        <footer class="panel-footer">
+            <button type="submit" class="btn btn-primary" ng-click="cadastrarUserCtrl.concluirCadastro()">{{'CONCLUIR' | translate}}</button>
+            <button type="button" class="btn btn-default" ui-sref="app.public.signIn.login">{{'CANCELAR'| translate}}</button>
+        </footer>
+    </div>
+</section>

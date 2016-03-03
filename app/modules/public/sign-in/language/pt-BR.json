@@ -1,0 +1,39 @@
+{
+    "TITULO_LOGIN" : "Para cadastrar manifestação é necessário estar logado. \n Usuário internal (Servidor do ERUDIO): para acessar o sistema, utilizar o seu login e password de rede.",
+    "USUARIO_EMAIL" : "Usuário (e-mail)",
+    "PASSWORD" : "Password",
+    "ENTRAR" : "Entrar",
+    "ESQUECI_A_PASSWORD" : "Esqueci a password",
+    "QUERO_ME_CADASTRAR" : "Quero me cadastrar",
+
+    "TITULO_ESQUECI_A_PASSWORD" : "Não se preocupe, nós te ajudaremos a cadastrar uma nova password. Basta informar abaixo o e-mail que foi utilizado no seu cadastro.",
+    "EMAIL" : "E-mail",
+    "ENVIAR" : "Enviar",
+    "VOLTAR" : "Voltar",
+
+    "CADASTRAR_NOVA_PASSWORD" : "Cadastrar Nova Password",
+    "NOVA_PASSWORD" : "Nova Password",
+    "CONFIRMAR_A_NOVA_PASSWORD" : "Confirmar a Nova Password",
+    "CONCLUIR" : "Concluir",
+    "CANCELAR" : "Cancelar",
+
+    "DATA_PESSOAIS" : "Personal Data",
+    "PF_PESSOA_FISICA" : "PF - Pessoa Física",
+    "PJ_PESSOA_JURIDICA" : "PJ - Pessoa Jurídica",
+    "PRONOME_DE_TRATAMENTO" : "Pronome de Tratamento",
+    "COMPLETE_NAME" : "Complete Name",
+    "DETALHAMENTO_CAMPO_EMAIL" : "Seu e-mail será utilizado como usuário para acessar o sistema",
+    "CONFIRMAR_EMAIL" : "Confirmar E-mail",
+    "PAIS_DE_RESIDENCIA" : "País de residência",
+    "UF" : "UF",
+    "GRAU_DE_INSTRUCAO" : "Grau de instrução",
+    "CONFIRMAR_PASSWORD" : "Confirmar password",
+    "CONCLUIR" : "Concluir",
+    "TIPO_PESSOA": "Tipo pessoa",
+
+    "ATIVAR_CADASTRO_NO_SISTEMA": "Ativar Cadastro no Sistema",
+    "MSG_CADASTRO_ATIVADO": "Seu cadastro foi ativado com sucesso no sistema",
+    "VOLTAR_PAGINA_INICIAL": "Voltar à Página Inicial"
+
+
+}

@@ -1,0 +1,92 @@
+<section>
+    <form name="modalDataUserCtrl.formModalDataUser" novalidate>
+        <div class="modal-header">
+            <h3 class="modal-title">{{'USER_DATA' | translate}}</h3>
+        </div>
+
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{'PRONOME_DE_TRATAMENTO' | translate}}</label>
+                </div>
+                <div class="col-md-6">
+                      {{modalDataUserCtrl.personAcesso.user.pessoa.pronomeTratamento.name}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{'NOME_COMPLETO' | translate}}</label>
+                </div>
+                <div class="col-md-6">
+                      {{modalDataUserCtrl.personAcesso.user.pessoa.name}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{'E_MAIL' | translate}}</label>
+                </div>
+                <div class="col-md-6">
+                      {{modalDataUserCtrl.personAcesso.user.pessoa.email}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{'PAIS_DE_RESIDENCIA' | translate}}</label>
+                </div>
+                <div class="col-md-6">
+                      {{modalDataUserCtrl.personAcesso.user.pessoa.pais.name}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{'UF' | translate}}</label>
+                </div>
+                <div class="col-md-6">
+                      {{modalDataUserCtrl.personAcesso.user.pessoa.uf.id}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{'CPF_CNPJ' | translate}}</label>
+                </div>
+                <div class="col-md-6">
+                      {{modalDataUserCtrl.personAcesso.user.pessoa.cpf | cpf}}
+                      {{modalDataUserCtrl.personAcesso.user.pessoa.cnpj | cnpj}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{'GRAU_DE_INSTRUCAO' | translate}}</label>
+                </div>
+                <div class="col-md-6">
+                      {{modalDataUserCtrl.personAcesso.user.pessoa.grauInstrucao.name}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{'DATA_DE_CADASTRO_USUARIO' | translate}}</label>
+                </div>
+                <div class="col-md-6">
+                      {{modalDataUserCtrl.personAcesso.dataCadastro}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{'DATA_DE_CONFIRMACAO_CADASTRO' | translate}}</label>
+                </div>
+                <div class="col-md-6">
+                      {{modalDataUserCtrl.personAcesso.dataConfirmacaoCadastro}}
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-default" ng-click="modalDataUserCtrl.fecharModal()">{{'BUTTON_BACK'| translate}}</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</section>

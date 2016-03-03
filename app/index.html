@@ -1,0 +1,259 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+  <div>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <meta http-equiv="Content-Language" content="pt-BR">
+
+    <!-- basic styles -->
+    <!-- <link rel="shortcut icon" href="images/tradelogo_32x32.png"> -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" href="bower_components/angular-block-ui/angular-block-ui.min.css" />
+    <link rel="stylesheet" href="bower_components/angular-treeview/css/angular.treeview.css">
+    <link rel="stylesheet" href="bower_components/isteven-angular-multiselect/angular-multi-select.css">
+    <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.min.css" >
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="bower_components/ng-sortable/dist/ng-sortable.min.css" />
+    <link rel="stylesheet" href="aceadminv133/dist/css/ace.min.css" />
+    <link rel="stylesheet" href="aceadminv133/dist/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="aceadminv133/dist/css/jquery.gritter.min.css" />
+    <link rel="stylesheet" href="aceadminv133/assets/css/ace-fonts.css" />
+    <link rel="stylesheet" href="aceadminv133/dist/css/ace-skins.min.css" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+
+
+    <link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) styles/main.css -->
+
+    <!-- endbuild -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/erudio-custom.css">
+
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+
+
+    <!-- page specific plugin styles -->
+
+    <!-- fonts -->
+
+
+    <!-- <link rel="stylesheet" href="assets/css/select2.css" /> <!-- FIND -->
+
+    <!-- Wee need check
+<link rel="stylesheet" href="styles/ng-tags-input.bootstrap.css" />
+<link rel="stylesheet" href="styles/ng-tags-input.css" />
+<link rel="stylesheet" href="styles/main.css" />
+    -->
+
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="aceadminv133/assets/css/ace-ie.min.css" />
+    <![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+    <script src="aceadminv133/assets/js/html5shiv.js"></script>
+    <script src="aceadminv133/dist/js/respond.min.js"></script>
+    <![endif]-->
+  </div>
+</head>
+<body ng-app="erudioApp">
+
+    <!-- TODO Check
+
+    <div ng-switch-when="login" style="height: 100%;">
+        <span ng-view=""></span>
+    </div>
+
+    <div ng-switch-when="page" id="page-container">
+        <div ng-include="'layout.html?v=' + version"></div>
+    </div>
+
+  -->
+    <div ng-include="'layout.html?v=' + 1.0"></div>
+    <!--[if lte IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+        <script>
+//            (function (i, s, o, g, r, a, m) {
+//                i['GoogleAnalyticsObject'] = r;
+//                i[r] = i[r] || function () {
+//                    (i[r].q = i[r].q || []).push(arguments)
+//                }, i[r].l = 1 * new Date();
+//                a = s.createElement(o),
+//                m = s.getElementsByTagName(o)[0];
+//                a.async = 1;
+//                a.src = g;
+//                m.parentNode.insertBefore(a, m)
+//            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+//
+//            ga('create', 'UA-XXXXX-X');
+//            ga('send', 'pageview');
+        </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+
+    <!-- <script src="bower_components/angular-route/angular-route.js"></script> -->
+    <!-- CHECKADO -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-block-ui/angular-block-ui.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-i18n/angular-locale_pt-br.js"></script>
+    <script src="bower_components/angular-treeview/angular.treeview.js"></script>
+    <script src="bower_components/angular-file-upload/angular-file-upload.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-highlightjs/build/angular-highlightjs.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
+    <script src="bower_components/angular-input-masks/angular-input-masks-standalone.min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="bower_components/angular-translate-loader-url/angular-translate-loader-url.min.js"></script>
+    <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-breadcrumb/release/angular-breadcrumb.js"></script>
+    <script src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="bower_components/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js"></script>
+
+    <script src="bower_components/es5-shim/es5-shim.min.js"></script>
+    <script src="bower_components/isteven-angular-multiselect/angular-multi-select.min.js"></script>
+
+    <script src="bower_components/lodash/lodash.js"></script>
+
+    <script src="bower_components/ng-table/dist/ng-table.js"></script>
+    <script src="bower_components/ng-table/dist/ng-table.min.js"></script>
+    <script src="bower_components/ng-flow/dist/ng-flow-standalone.min.js"></script>
+
+    <script src="bower_components/ngScrollTo/ng-scrollto.js"></script>
+    <script src="bower_components/ngMask/dist/ngMask.js"></script>
+    <script src="bower_components/ng-sortable/dist/ng-sortable.min.js"></script>
+    <script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+    <script src="bower_components/restangular/dist/restangular.min.js"></script>
+
+    <script src="bower_components/ui-router-extras/release/modular/ct-ui-router-extras.core.js"></script>
+    <script src="bower_components/ui-router-extras/release/modular/ct-ui-router-extras.statevis.js"></script>
+    <script src="bower_components/ui-router-extras/release/modular/ct-ui-router-extras.previous.js"></script>
+    <script src="bower_components/ui-router-extras/release/modular/ct-ui-router-extras.transition.js"></script>
+    <script src="bower_components/ui-router-extras/release/modular/ct-ui-router-extras.sticky.js"></script>
+
+    <!-- CHECKADO -->
+
+    <!-- endbower
+    <!-- endbuild -->
+
+    <!-- <script src="assets/js/typeahead-bs2.min.js"></script> -->
+
+    <!-- page specific plugin scripts -->
+
+    <!-- ace scripts -->
+    <script src="aceadminv133/assets/js/ace-extra.js"></script>
+    <script src="aceadminv133/assets/js/ace-elements.js"></script>
+    <script src="aceadminv133/assets/js/ace.js"></script>
+    <script src="aceadminv133/assets/js/jquery.maskedinput.js"></script>
+    <script src="aceadminv133/dist/js/ace-elements.min.js"></script>
+    <script src="aceadminv133/dist/js/ace.min.js"></script>
+    <script src="aceadminv133/dist/js/ace-extra.min.js"></script>
+    <script src="aceadminv133/dist/js/jquery.gritter.min.js"></script>
+    <script src="aceadminv133/dist/js/jquery.slimscroll.min.js"></script>
+
+    <!-- FIND --><!-- FIND --><!-- FIND --><!-- FIND -->
+    <script src="assets/js/jquery.mlens-1.4.min.js"></script>
+    <script src="assets/js/select2.js"></script>
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/angu-fixed-header-table.js"></script>
+    <script src="assets/js/custom-ng-tags-input.js"></script>
+    <script src="assets/js/angular-google-maps.min.js"></script>
+    <script src="assets/js/mask.js"></script>
+
+    <!-- FIND --><!-- FIND --><!-- FIND --><!-- FIND -->
+    <!--
+    <script src="assets/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="assets/assets/js/jquery.price.format.js"></script>-->
+
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+    <!-- endbuild -->
+
+    <!-- My controllers here -->
+    <script src="app.js"></script>
+    <script src="config/config.js"></script>
+    <script src="config/utils.js"></script>
+    <!-- build:remove:dist -->
+    <script src="config/config-development.js"></script>
+    <!-- /build -->
+
+    <script src="modules/alerts/alerts.js"></script>
+    <script src="modules/dialog/dialog.js"></script>
+    <script src="interceptors/http-message-handle-interceptor.js"></script>
+
+    <script src="directives/roles-allowed/roles-allowed.js"></script>
+    <script src="directives/roles-allowed/roles-allowed-service.js"></script>
+
+    <script src="modules/private/private.js"></script>
+    <script src="modules/public/public.js"></script>
+    <script src="modules/public/sign-in/sign-in.js"></script>
+    <script src="modules/private/manage-person/manage-person.js"></script>
+    <script src="modules/private/index/index.js"></script>
+</body>
+</html>

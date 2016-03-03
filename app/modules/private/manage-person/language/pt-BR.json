@@ -1,0 +1,29 @@
+{
+    "INITIALS": "Initials",
+    "DESCRIPTION": "Description",
+    "SITUATION": "Situação",
+    "PERSONS_LIST": "Persons List",
+    "INSERT_PERSON": "Insert Person",
+    "CARGO": "Cargo",
+    "UNIDADE": "Unidade",
+    "USER_DATA": "User Data",
+    "NAME": "Name",
+    "NAME_COMPLETO": "Name Completo",
+    "PRONAME_DE_TRATAMENTO": "Pronome de Tratamento",
+    "PAIS_DE_RESIDENCIA": "País de Residência",
+    "UF": "UF",
+    "CPF_CNPJ": "CPF/CNPJ",
+    "GRAU_DE_INSTRUCAO": "Grau de Instrução",
+    "DATA_DE_CADASTRO_USUARIO": "Data de Cadastro do Usuário",
+    "DATA_DE_CONFIRMACAO_CADASTRO": "Data de Confirmação do Cadastro",
+    "E_MAIL": "E-mail",
+
+    "PESQUISAR_USUARIOS": "Pesquisar Usuários",
+    "PESQUISAR": "Pesquisar",
+    "LIMPAR": "Limpar",
+
+    "FUNCIONALITIES_ASSOCIADAS": "Functionalities Associadas",
+    "FUNCIONALITIES": "Functionalities",
+
+    "SHOW": "Show"
+}

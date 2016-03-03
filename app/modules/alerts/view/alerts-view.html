@@ -1,0 +1,10 @@
+<uib-alert class="alerta" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeModalAlerts()">
+    <div ng-bind-html="alert.msg"></div>
+<!--
+    <br/>
+    <p>
+        <button type="button" class="btn btn btn-{{alert.type}}" ng-click="closeById(alert.id)">Ok</button>
+        <button type="button" class="btn btn-default" ng-click="closeById(alert.id)">Cancelar</button>
+    </p>
+-->
+</uib-alert>

@@ -1,0 +1,52 @@
+<section>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">{{'PERSONS_LIST' | translate}}</h4>
+        </div>
+
+        <!--  panel body !-->
+        <div class="panel-body">
+            <form name="formPerson" class="form-horizontal" novalidate>
+                <table class="table table-bordered table-striped table-condensed table-hover" ng-table="showPersonCtrl.tableParams">
+                    <tbody>
+                        <tr ng-repeat="item in $data" scroll-to="" class="text-center">
+                            <td data-title="'ID'" sortable="'idPerson'">{{item.idPerson}}</td>
+                            <td data-title="'Name'" sortable="'name'">{{item.name}}</td>
+                            <td data-title="'E-mail'" sortable="'email'">{{item.email}}</td>
+                            <td data-title="'Phone'" sortable="'phone'">{{item.phone}}</td>
+                            <td data-title="'CPF'" sortable="'cpf'">{{item.cpf}}</td>
+                            <td data-title="'Birthday'" sortable="'birthDayDate'">{{item.birthDayDate}}</td>
+                            <td data-title="'Gender'" sortable="'gender.description'">{{item.gender.description}}</td>
+                            <td data-title="'Action'" ng-style="{ 'width': '16%' }">
+                                <a class="red" href="" ui-sref="app.private.managePerson.visualizar({person: item})">
+                                    <button type="button" uib-tooltip="{{'SHOW_RESOURCE' | translate}}" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </a>
+                                <a class="red">
+                                    <button type="button" uib-tooltip="{{'UPDATE_RESOURCE' | translate}}" class="btn  btn-default" ng-disabled="showPersonCtrl.disableChanges(item)" ng-click="showPersonCtrl.update(item)">
+                                        <i class="glyphicon glyphicon-pencil"></i>
+                                    </button>
+                                </a>
+                                <a class="red">
+                                    <button type="button" uib-tooltip="{{'REMOVE_RESOURCE' | translate}}" class="btn btn-default" ng-disabled="showPersonCtrl.disableChanges(item)" ng-click="showPersonCtrl.onDelete(item);">
+                                        <i class="glyphicon glyphicon-trash"></i>
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr ng-if="showPersonCtrl.tableParams.totalResults == 0">
+                            <td colspan="3">{{'DATA_NOT_FOUND' | translate}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="col-md-12">
+                    <p class="pull-left">{{'AMOUNT' | translate}}: {{showPersonCtrl.total}}</p>
+                </div>
+            </form>
+        </div>
+        <footer class="panel-footer">
+            <button type="submit" class="btn btn-primary" ui-sref="app.private.managePerson.insert({person: {}})">{{'INSERT'| translate}}</button>
+        </footer>
+    </div>
+</section>

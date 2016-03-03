@@ -1,0 +1,13 @@
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            {{dialogCtrl.message}}
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="pull-left">
+        <button type="button" class="btn btn-primary" ng-click="dialogCtrl.returnTrue()">{{'BUTTON_YES'| translate}}</button>
+        <button type="button" class="btn btn-default" ng-click="dialogCtrl.returnFalse()">{{'BUTTON_NO'| translate}}</button>
+    </div>
+</div>

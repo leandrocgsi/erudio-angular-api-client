@@ -1,0 +1,125 @@
+<section ng-disablef5key="false">
+    <div class="panel panel-default" ng-disablef5key="false">
+        <div class="panel-heading">
+            <h4 class="panel-title">{{'VISUALIZAR_PERSON' | translate}}</h4>
+        </div>
+        <div class="panel-body">
+            <form class="form form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-3 doisPontos">{{'PERSON' | translate}}</label>
+                    <p class="col-md-4 form-control-static">{{visualizarPersonCtrl.person.name}}</p>
+                    <label class="control-label col-sm-2 doisPontos">{{'INITIALS' | translate}}</label>
+                    <div class="col-md-3">
+                        <p class="form-control-static">{{visualizarPersonCtrl.person.sigla}}</p>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 doisPontos">{{'DESCRIPTION' | translate}}</label>
+                    <p class="col-md-4 form-control-static">    {{visualizarPersonCtrl.person.descricao}}</p>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3 doisPontos">{{'SITUATION' | translate}}</label>
+                    <p class="col-md-4 form-control-static">     {{visualizarPersonCtrl.person.ativo == true ? 'ENABLED' : 'DISABLED'}}</p>
+            </div>
+            <uib-tabset>
+                <uib-tab heading="{{'FUNCIONALITIES_ASSOCIADAS' | translate}}">
+                    <div class="row">
+                        <div>
+                            <div class="col-md-12">
+                                <table class="table table-bordered table-striped table-condensed table-hover" ng-table="visualizarPersonCtrl.parametersTableFunctionalities">
+                                    <tr ng-repeat="functionality in $data | orderBy: 'descricao' as filtered_result track by functionality.descricao">
+                                        <td data-title="getMessage('FUNCIONALITIES')" >
+                                            <permission-functionality data="functionality" readyonly="true"></permission-functionality>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="pull-left">{{'AMOUNT' | translate}}: {{visualizarPersonCtrl.totalRegisto}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </uib-tab>
+                    <uib-tab heading="{{'SERVIDORES_ASSOCIADOS' | translate}}" ng-show="visualizarPersonCtrl.person.name != 'USUARIO_EXTERNAL'">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-bordered table-striped table-condensed table-hover" ng-table="visualizarPersonCtrl.parametersTableUserInternals">
+                                    <tbody>
+                                        <tr ng-repeat="item in $data" scroll-to="">
+                                            <td data-title="getMessage('SERVIDOR')" sortable="'cuiw.userInternal.user.pessoa.name'">{{item.user.pessoa.name}}</td>
+                                            <td data-title="getMessage('CARGO')" sortable="'cuiw.cargo.name'">{{item.cargoVO.name}}</td>
+                                            <td data-title="getMessage('UNIDADE')" sortable="'cuiw.userInternal.unidade.name'">{{item.unidade.name}}</td>
+
+                                        </tr>
+                                        <tr ng-if="visualizarPersonCtrl.paginacaoUserInternalsDTO.totalResults == 0">
+                                            <td colspan="3">{{'DATA_NOT_FOUND' | translate}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </uib-tab>
+                    <uib-tab heading="{{'USUARIOS_ASSOCIADOS' | translate}}" ng-show="visualizarPersonCtrl.person.name == 'USUARIO_EXTERNAL'">
+                        <fieldset>
+                            <legend>{{'PESQUISAR_USUARIOS' | translate}}</legend>
+                            <div class="form-group">
+                                <label for="name" class="col-md-3 control-label doisPontos">{{'NAME' | translate}}</label>
+                                <div class="col-md-8">
+                                    <input id="name" name="name" type="text" ng-model="visualizarPersonCtrl.namePessoa"  class="form-control" maxlength="150" capitalize/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-md-3 control-label doisPontos">{{'E_MAIL' | translate}}</label>
+                                <div class="col-md-8">
+                                    <input id="email" name="email" type="email" ng-model="visualizarPersonCtrl.emailPessoa"  class="form-control" maxlength="150"/>
+                                </div>
+
+                            </div>
+                            <footer class="panel-footer-pesquisar m-r-n-1">
+                                <button type="submit" class="btn btn-primary" ng-click="visualizarPersonCtrl.pesquisarUserExternals()">
+                                    {{'PESQUISAR'| translate}}
+                                </button>
+                                <button type="submit" class="btn btn-primary" ng-click="visualizarPersonCtrl.limparParameters()">
+                                    {{'LIMPAR'| translate}}
+                                </button>
+                            </footer>
+                        </fieldset>
+                        <br>
+                        <section class="container-box">
+                            <div class="table-responsive">
+                                <div class="panel panel-default">
+                                <table class="table table-bordered table-striped table-condensed table-hover" ng-table="visualizarPersonCtrl.parametersTableUserExternals">
+                                    <tbody>
+                                        <tr ng-repeat="item in $data" scroll-to="" class="text-center">
+                                            <td data-title="getMessage('NAME')" sortable="'user.pessoa.name'">{{item.user.pessoa.name}}</td>
+                                            <td data-title="getMessage('E_MAIL')" sortable="'cargo'">{{item.user.pessoa.email}}</td>
+                                            <td data-title="getMessage('ACAO')" sortable="'unidade.name'">
+                                                <a class="red">
+                                                    <button type="button" uib-tooltip="{{'SHOW_RESOURCE' | translate}}" class="btn btn-default" ng-click="visualizarPersonCtrl.modalDadosUser(item)">
+                                                        <i class="glyphicon glyphicon-search"></i>
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr ng-if="visualizarPersonCtrl.paginacaoUserExternalsDTO.totalResults == 0">
+                                            <td colspan="3">{{'DATA_NOT_FOUND' | translate}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                </section>
+                    </uib-tab>
+                </uib-tabset>
+
+            </form>
+            </div>
+            <footer class="panel-footer">
+                <button type="submit" class="btn btn-primary" onClick="javascript:history.go(-1);">
+                    {{'BUTTON_BACK'| translate}}
+                </button>
+            </footer>
+        </div>
+    </section>

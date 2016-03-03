@@ -1,0 +1,5 @@
+<div>
+    <a ng-repeat="(language, language) in languages" title="{{language.descricao}}" href="javascript:void(0);" ng-click="mudarLanguage(language);" class="topo-branco-links-round">
+        <span data-ng-class="{active: languageAtual==language, disabled: languageAtual!=language}"></span><span>{{language.label}}</span> 
+    </a>
+</div>

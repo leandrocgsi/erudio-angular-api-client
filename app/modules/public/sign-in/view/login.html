@@ -1,0 +1,37 @@
+<section>
+    <div class="form-group row">
+        <div class="col-md-12 text-center">
+            <h4>{{'TITULO_LOGIN' | translate}}</h4>
+        </div>
+    </div>
+    <div class="form-group">
+        <form name="loginCtrl.formLogin" class="form-group" novalidate>
+            <div class="form-group row">
+                <div class="col-md-2"></div>
+                <label for="user" class="col-md-2 control-label obrigatorio">{{'USUARIO_EMAIL' | translate}}</label>
+                <div class="col-md-4">
+                    <input id="user" name="user" type="text" class="form-control" ng-model="loginCtrl.user" required maxlength="150"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-2"></div>
+                <label for="password" class="col-md-2 control-label obrigatorio">{{'PASSWORD' | translate}}</label>
+                <div class="col-md-4">
+                    <input id="password" name="password" type="password" class="form-control" ng-model="loginCtrl.password" required maxlength="32"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary" ng-click="loginCtrl.performLogin()">{{'ENTRAR' | translate}}</button>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12 text-center">
+                    <a href="#/public/cadastrarUser">{{'QUERO_ME_CADASTRAR' | translate}}</a>
+                    <br/>
+                    <a href="#/public/solicitarRedefinicaoPassword">{{'ESQUECI_A_PASSWORD' | translate}}</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "highlight.js",
+        "D:/SandBox/MyCode/erudio-client/erudio-based-ctis/erudio-frontend/src/main/webapp/app/bower_components/tinymce-dist/tinymce.min.js"
+    ]
+}

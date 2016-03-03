@@ -1,0 +1,34 @@
+<div>
+    <div class="row" >
+        <div  class="col-md-12">
+            <p class="text-center">
+                <button type="button" class="btn btn-mini pull-left" ng-click="showFull()" >
+                    <i class="pull-left glyphicon glyphicon-triangle-top" ng-class="{toggled : isOpened}"></i>
+                </button>
+                {{data.descricao}}
+            </p>
+        </div>
+    </div>
+    <div class="row" ng-show="isOpened" style="padding:15px;">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center col-md-1">
+                            <input ng-click="checkAll()" ng-disabled="verificaChecked()" type="checkbox"/>
+                        </th>
+                        <th class="text-center">
+                            Permissões
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="permission in data.tipoAcessoVOs">
+                        <td class="text-center"><input type="checkbox" ng-disabled="verificaChecked()" ng-click="permission.checked = !permission.checked" ng-checked="permission.checked"/></td>
+                        <td class="text-center">{{permission.descricao}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

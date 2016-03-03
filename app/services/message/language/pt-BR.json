@@ -1,0 +1,52 @@
+{
+    "REQUIRED_FIELD" : "The field {{field}} is required!",
+    "INVALID_EMAIL" : "Invalid E-mail!",
+    "INVALID_CPF" : "Invalid CPF!",
+    "EMAIL_NOT_FOUND" : "E-mail not found!",
+    "INVALID_CEP" : "Invalid CEP!",
+    "DATA_NOT_FOUND" : "Data not found!",
+    "SHOW_RESOURCE" : "Show resource.",
+    "UPDATE_RESOURCE" : "Update resource.",
+    "REMOVE_RESOURCE" : "Remove resource.",
+    "EMAIL_NOT_ALLOWED" : "E-mail pattern not allowed.",
+    "EMAIL_SENT" : "E-mail sent for {{email}} containing the information to register new password.",
+    "PASSWORD_RECOVERED_WITH_SUCESS" : "Password recovered with success!",
+    "INVALID_CNPJ" : "Invalid CNPJ!",
+    "YOUR_REGISTRATION_WAS_SUCCESSFULL" : "Your registration was successful.</br>A message was sent to your email {{email}}, with intructions for activating your user on the system.</br>Access your email and follow the instructions to confirm the registration in the system.",
+    "DIVERGENT_EMAIL" : "E-mail addresses do not match!",
+    "DIVERGENT_PASSWORDS":"Passwords do not match!",
+    
+    "INVALID_FIELD": "Invalid Field {{field}}!",
+    "INVALID_FIELD_MIN_LENGHT": "Invalid Field {{field}}. Minimum number of characters is {{quantidade}}.",
+    "INVALID_FIELD_MAX_LENGHT": "Maximum number of characters not met for field {{field}}.",
+
+    "AMOUNT":"Amount of resources",
+    "ACTIONS":"Actions",
+    "SELECT":"Select",
+    "ALL":"All",
+
+    "BUTTON_YES":"Yes",
+    "BUTTON_NO":"No",
+
+    "BUTTON_SEARCH":"Search",
+    "BUTTON_CLEAN":"Clean",
+    "BUTTON_INSERT":"Insert",
+    "BUTTON_SAVE":"Saver",
+    "BUTTON_CANCEL":"Cancel",
+    "BUTTON_BACK":"Back",
+    "BUTTON_FINISH":"Finish",
+
+    "ACTION": "Action",
+    "INSERT": "Insert",
+    "REMOVE": "Remove",
+    "SAVE": "Save",
+    "UPDATE": "Update",
+    "ADD": "Add",
+    "FINISH": "Finish",
+    "CANCEL": "Cancel",
+
+    "YES":"Yes",
+    "NO":"No",
+    "ENABLED":"Enabled",
+    "DISABLED":"Disabled"
+}

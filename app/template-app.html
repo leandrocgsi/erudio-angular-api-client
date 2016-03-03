@@ -1,0 +1,16 @@
+<div id="erudioCabecalho" class="row">
+
+</div>
+<div id="erudioFaixaAzul" class="row text-right">
+    <div ng-if="userLogado">
+        {{userLogado.name}} | <a href="javascript:void(0);" ng-click="performLogout()">SAIR</a>
+    </div>
+</div>
+
+<div class="row row-offcanvas row-offcanvas-left">
+    <ui-view/>
+</div>
+
+<div id="erudioFooter" class="row">
+    Version: 0.0.2-snapshot
+</div>
