@@ -14,12 +14,6 @@ experience that will is displayed for smaller device sizes. The responsive layou
 the user list, reveal the **menu** button. In the User Details view, you may also click the
 **share** button  to show the Contact &lt;User&gt; bottom sheet view.
 
-<br/>
-
-![material-starter-ux2](https://cloud.githubusercontent.com/assets/210413/6448551/70864488-c0e0-11e4-8767-c4e1e4c2f343.png)
-
-<br/>
-
 This Starter app demonstrates how:
 
 *  Angular Material `layout` and `flex` options can easily configure HTML containers
