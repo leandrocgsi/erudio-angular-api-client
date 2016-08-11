@@ -58,7 +58,7 @@ module.exports = function(grunt) {
          src: [ '**', 'bower_components/**/*.js']
        }]
     },
-   erudio: {
+   robin: {
      files: [{
          expand: true,
          mangle: false,
@@ -206,7 +206,7 @@ module.exports = function(grunt) {
 
  grunt.registerTask('build',[
    'copy:dist',
-   'copy:erudio',
+   'copy:robin',
    'processhtml:dist',
    'htmlmin',
    'cssmin',

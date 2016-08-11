@@ -42,7 +42,7 @@ function($ocLazyLoadProvider, $stateProvider, $urlRouterProvider, $animateProvid
     $stateProvider.state('app', {
         url: '',
         abstract: true,
-        templateUrl: 'main.html',
+        templateUrl: 'template-app.html',
         controller: 'AppController',
         controllerAs:'appCtrl',
         resolve: {
@@ -55,6 +55,10 @@ function($ocLazyLoadProvider, $stateProvider, $urlRouterProvider, $animateProvid
                         'directives/accessibility-bar/accessibility-bar.js',
                         'directives/language-bar/language-bar.js',
                         'directives/language-bar/language-bar-controller.js',
+                        'directives/header/header-controller.js',
+                        'directives/header/header.js',
+                        'directives/footer/footer.js',
+                        'directives/footer/footer-controller.js',
                         'directives/custom-validator/custom-validator.js',
                         'directives/capitalize/capitalize.js',
                         'directives/permission-functionality/permission-functionality.js',
