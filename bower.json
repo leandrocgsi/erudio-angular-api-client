@@ -34,7 +34,8 @@
     "angular-jwt": "~0.0.9",
     "ng-flow": "~2",
     "cornernote-ace": "latest",
-    "angular-ui-tinymce": "latest"
+    "angular-ui-tinymce": "latest",
+    "ngstorage": "^0.3.11"
   },
   "devDependencies": {
     "jasmine-expect": "~1.22.3",
