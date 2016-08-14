@@ -11,7 +11,7 @@ form.ng-submitted input.ng-invalid {
 /*h1, h2, h3, h4, h5, h6  */
 
 
-#erudioRoot{
+#navbar{
     background-color: #F1F2F2;
 }
 
@@ -185,7 +185,7 @@ legend {
 
 /*Title modal*/
 .modal-title{
-    color: #033C5B;    
+    color: #033C5B;
 }
 
 /* Panel */
