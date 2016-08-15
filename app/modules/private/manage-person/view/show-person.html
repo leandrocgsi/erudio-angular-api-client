@@ -7,7 +7,7 @@
         <!--  panel body !-->
         <div class="panel-body">
             <form name="formPerson" class="form-horizontal" novalidate>
-                <table class="table table-bordered table-striped table-condensed table-hover" ng-table="showPersonCtrl.tableParams">
+                <table class="table table-striped table-bordered table-hover" ng-table="showPersonCtrl.tableParams">
                     <tbody>
                         <tr ng-repeat="item in $data" scroll-to="" class="text-center">
                             <td data-title="'ID'" sortable="'idPerson'">{{item.idPerson}}</td>
@@ -19,19 +19,13 @@
                             <td data-title="'Gender'" sortable="'gender.description'">{{item.gender.description}}</td>
                             <td data-title="'Action'" ng-style="{ 'width': '16%' }">
                                 <a class="red" href="" ui-sref="app.private.managePerson.visualizar({person: item})">
-                                    <button type="button" uib-tooltip="{{'SHOW_RESOURCE' | translate}}" class="btn btn-default">
-                                        <i class="glyphicon glyphicon-search"></i>
-                                    </button>
+                                    <i class="ace-icon fa fa-search bigger-130" uib-tooltip="{{'SHOW_RESOURCE' | translate}}" class="btn btn-default"></i>
+                                </a>
+                                <a class="blue">
+                                    <i class="ace-icon fa fa-pencil bigger-130" uib-tooltip="{{'UPDATE_RESOURCE' | translate}}" class="btn  btn-default" ng-disabled="showPersonCtrl.disableChanges(item)" ng-click="showPersonCtrl.update(item)"></i>
                                 </a>
                                 <a class="red">
-                                    <button type="button" uib-tooltip="{{'UPDATE_RESOURCE' | translate}}" class="btn  btn-default" ng-disabled="showPersonCtrl.disableChanges(item)" ng-click="showPersonCtrl.update(item)">
-                                        <i class="glyphicon glyphicon-pencil"></i>
-                                    </button>
-                                </a>
-                                <a class="red">
-                                    <button type="button" uib-tooltip="{{'REMOVE_RESOURCE' | translate}}" class="btn btn-default" ng-disabled="showPersonCtrl.disableChanges(item)" ng-click="showPersonCtrl.onDelete(item);">
-                                        <i class="glyphicon glyphicon-trash"></i>
-                                    </button>
+                                    <i class="ace-icon fa fa-trash-o bigger-130" uib-tooltip="{{'REMOVE_RESOURCE' | translate}}" class="btn btn-default" ng-disabled="showPersonCtrl.disableChanges(item)" ng-click="showPersonCtrl.onDelete(item);" ></i>
                                 </a>
                             </td>
                         </tr>
