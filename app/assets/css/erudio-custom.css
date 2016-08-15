@@ -64,7 +64,7 @@ form.ng-submitted input.ng-invalid {
 
 .breadcrumb>.active{padding: 9px 0px; margin-top:-15px}
 
-.breadcrumb>.active:before { content:"Você está em: ";}
+/** .breadcrumb>.active:before { content:"Você está em: ";} */
 
 .menuFunctionality{
 

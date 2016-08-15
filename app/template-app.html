@@ -22,9 +22,6 @@
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<!-- build:css(.) styles/vendor.css -->
 		<!-- bower:css -->
-		<link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.min.css" >
-		<link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css">
-		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
 		<!-- endbower -->
 		<!-- endbuild -->
@@ -69,7 +66,7 @@
 
 		<!-- #section:basics/navbar.layout -->
 		<div id="navbar" class="navbar navbar-default">
-			<ui-view/>
+
 		</div>
 
 		<!-- /section:basics/navbar.layout -->
@@ -340,6 +337,7 @@
 
 			<!-- /section:basics/sidebar -->
 			<div class="main-content">
+        <ui-view/>
 				<div class="main-content-inner">
 					<!-- #section:basics/content.breadcrumbs -->
 					<div class="breadcrumbs" id="breadcrumbs">
@@ -370,7 +368,7 @@
 
 					<!-- /section:basics/content.breadcrumbs -->
 					<div class="page-content">
-
+main-content
 						<!-- /section:settings.box -->
 						<div class="page-header">
 							<h1>
@@ -381,6 +379,8 @@
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
+
+
 
 					</div><!-- /.page-content -->
 				</div>
