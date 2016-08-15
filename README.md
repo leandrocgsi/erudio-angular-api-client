@@ -16,7 +16,7 @@ the user list, reveal the **menu** button. In the User Details view, you may als
 
 <br/>
 
-![material-starter-ux2](https://cloud.githubusercontent.com/assets/210413/6448551/70864488-c0e0-11e4-8767-c4e1e4c2f343.png)
+![Example Layout](https://github.com/leandrocgsi/erudio-angular-api-client/blob/master/img/table.png?raw=true)
 
 <br/>
 
