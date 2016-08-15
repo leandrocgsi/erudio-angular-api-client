@@ -5,9 +5,9 @@ angular.module('erudioApp').controller('PublicController',
     var self = this;
 
     function init() {
-      //  if ($scope.userLogado) {
+        if ($scope.userLogado) {
             $state.go('app.private.index');
-        //}
+        }
     }
 
     init();
