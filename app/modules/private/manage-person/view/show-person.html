@@ -29,9 +29,12 @@
             			<div class="widget-body">
               				<div class="widget-main" style="min-height: 300px;">
                           <table ng-table="showPersonCtrl.tableParams" class="table table-bordered table-striped table-hover" >
+                              <theader style="text-align: center !important;">
+
+                              </theader>
                               <tbody>
                                   <tr ng-repeat="item in $data" scroll-to="" class="text-center">
-                                      <td class="center" data-title="'ID'" sortable="'idPerson'">{{item.idPerson}}</td>
+                                      <td style="'align: center !important;'" data-title="'ID'" sortable="'idPerson'">{{item.idPerson}}</td>
                                       <td class="center" data-title="getMessage('NAME')" sortable="'name'">{{item.name}}</td>
                                       <td class="center" data-title="getMessage('E_MAIL')" sortable="'email'">{{item.email}}</td>
                                       <td class="center" data-title="'Phone'" sortable="'phone'">{{item.phone}}</td>
