@@ -1,3 +1,5 @@
+# Erudio Angular API Client
+
 [![Build Status](https://travis-ci.org/leandrocgsi/erudio-angular-api-client.svg?branch=master)](https://travis-ci.org/leandrocgsi/erudio-angular-api-client)
 [![Build Status](https://circleci.com/gh/leandrocgsi/erudio-angular-api-client.svg?&style=shield)](https://circleci.com/gh/leandrocgsi/erudio-angular-api-client/)
 
