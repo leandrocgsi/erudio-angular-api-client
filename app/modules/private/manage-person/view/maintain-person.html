@@ -62,8 +62,14 @@
             </form>
         </div>
         <footer class="panel-footer">
-            <button type="button" id="cancel" class="btn btn-info btn-sm" ng-click="maintainPersonCtrl.cadastrarPerson()" value="">{{'SAVE'| translate}}</button>
-            <button type="button" id="cancel" class="btn btn-danger btn-sm" ng-click="" onClick="javascript:history.go(-1);" value="">{{'CANCEL'| translate}}</button>
+            <button type="submit" id="cancel" class="btn btn-info btn-sm" ng-click="maintainPersonCtrl.cadastrarPerson()" value="">
+                <i class="icon-ok bigger-110"></i>
+                {{'SAVE'| translate}}
+            </button>
+            <button type="submit" id="cancel" class="btn btn-danger btn-sm" ng-click="" onClick="javascript:history.go(-1);" value="">
+                <i class="icon-remove bigger-110"></i>
+                {{'CANCEL'| translate}}
+            </button>
         </footer>
     </div>
 </section>
