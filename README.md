@@ -1,3 +1,8 @@
+# Erudio Angular API Client
+
+[![Build Status](https://travis-ci.org/leandrocgsi/erudio-angular-api-client.svg?branch=master)](https://travis-ci.org/leandrocgsi/erudio-angular-api-client)
+[![Build Status](https://circleci.com/gh/leandrocgsi/erudio-angular-api-client.svg?&style=shield)](https://circleci.com/gh/leandrocgsi/erudio-angular-api-client/)
+
 # Angular Material-Start
 
 This Material **start*** project is a *seed* for AngularJS Material applications. The project contains a sample AngularJS application and is pre-configured to install the Angular framework and a bunch of development and testing tools for instant web development gratification.
