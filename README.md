@@ -5,7 +5,7 @@
 
 # About this project
 
-This is a simple AngularJS application that can be connect to [Erudio API OAUTH2](https://github.com/leandrocgsi/erudio-api-oauth2)
+This is a simple AngularJS application that can be connect to [Erudio API OAUTH2](https://github.com/leandrocgsi/erudio-api-oauth2). He was build based in [Angular Material-Start (ES6)](https://github.com/angular/material-start) project.
 
 # Angular Material-Start
 
@@ -114,6 +114,10 @@ folders in your project.
 *Note that the `bower_components` folder would normally be installed in the root folder but
 material-start changes this location through the `.bowerrc` file.  Putting it in the app folder makes
 it easier to serve the files by a web server.*
+
+### Troubleshooting
+
+Maybe you need dele caches of bower and node.
 
 ### Run End-to-End Tests
 
