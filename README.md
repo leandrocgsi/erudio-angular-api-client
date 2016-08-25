@@ -3,6 +3,10 @@
 [![Build Status](https://travis-ci.org/leandrocgsi/erudio-angular-api-client.svg?branch=master)](https://travis-ci.org/leandrocgsi/erudio-angular-api-client)
 [![Build Status](https://circleci.com/gh/leandrocgsi/erudio-angular-api-client.svg?&style=shield)](https://circleci.com/gh/leandrocgsi/erudio-angular-api-client/)
 
+# About this project
+
+This is a simple AngularJS application that can be connect to [Erudio API OAUTH2](https://github.com/leandrocgsi/erudio-api-oauth2). He was build based in [Angular Material-Start (ES6)](https://github.com/angular/material-start) project.
+
 # Angular Material-Start
 
 This Material **start*** project is a *seed* for AngularJS Material applications. The project contains a sample AngularJS application and is pre-configured to install the Angular framework and a bunch of development and testing tools for instant web development gratification.
@@ -110,6 +114,10 @@ folders in your project.
 *Note that the `bower_components` folder would normally be installed in the root folder but
 material-start changes this location through the `.bowerrc` file.  Putting it in the app folder makes
 it easier to serve the files by a web server.*
+
+### Troubleshooting
+
+Maybe you need dele caches of bower and node.
 
 ### Run End-to-End Tests
 
