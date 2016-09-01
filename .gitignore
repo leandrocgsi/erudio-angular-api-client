@@ -1,4 +1,6 @@
 /dist/
 /grunt-maven.json
 /npm-debug.log
+/.gitignore
 bower_components/
+node_modules/
