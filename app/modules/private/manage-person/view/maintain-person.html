@@ -1,87 +1,94 @@
 <section>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">{{maintainPersonCtrl.titulo}}</h4>
-        </div>
-        <div class="panel-body">
-            <form name="maintainPersonCtrl.formPerson" class="form-horizontal" novalidate>
-                <div class="form-group">
-                    <label for="name" class="col-md-3 blue bolder control-label obrigatorio">Name</label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" maxlength="150" name="name" id="name" ng-model="maintainPersonCtrl.person.name" required capitalize>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="col-md-3 blue bolder control-label obrigatorio">E-mail</label>
-                    <div class="col-md-4">
-                      <div class="input-group" class="col-md-4">
-                          <input class="form-control input-mask-date col-md-4" type="text" name="email" id="email" ng-model="maintainPersonCtrl.person.email"/>
-                          <span class="input-group-btn">
-                              <button class="btn btn-sm btn-default" type="button">
-                                  <i class="ace-icon fa fa-envelope-o bigger-110"></i>
-                              </button>
-                          </span>
-                      </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="phone" class="col-md-3 blue bolder control-label obrigatorio">Phone</label>
-                    <div class="col-md-4">
-                      <div class="input-group" class="col-md-4">
-                          <input class="form-control input-mask-date col-md-4" type="text" name="phone" id="phone" ng-model="maintainPersonCtrl.person.phone"/>
-                          <span class="input-group-btn">
-                              <button class="btn btn-sm btn-default" type="button">
-                                  <i class="ace-icon fa fa-phone bigger-110"></i>
-                              </button>
-                          </span>
-                      </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="cpf" class="col-md-3 blue bolder control-label obrigatorio">CPF</label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" maxlength="14" name="cpf" id="cpf" ng-model="maintainPersonCtrl.person.cpf" ui-br-cpfcnpj-mask required capitalize>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="birthDayDate" class="col-md-3 blue bolder control-label obrigatorio">BirthDay Date</label>
-                    <div class="col-md-4">
-                      <div class="input-group" class="col-md-4">
-                          <input class="form-control input-mask-date col-md-4" type="text" name="birthDayDate" id="birthDayDate" ng-model="maintainPersonCtrl.person.birthDayDate"/>
-                          <span class="input-group-btn">
-                              <button class="btn btn-sm btn-default" type="button">
-                                  <i class="ace-icon fa fa-calendar bigger-110"></i>
-                              </button>
-                          </span>
-                      </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="login" class="col-md-3 blue bolder control-label obrigatorio">Login</label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" maxlength="6" name="login" id="login" ng-model="maintainPersonCtrl.person.login" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="col-md-3 blue bolder control-label obrigatorio">Password</label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" maxlength="6" name="password" id="password" ng-model="maintainPersonCtrl.person.password" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="permission" class="col-md-3 blue bolder control-label obrigatorio">Permission</label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" maxlength="12" name="permission" id="permission" ng-model="maintainPersonCtrl.person.permission" required capitalize>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="gender" class="col-md-3 blue bolder control-label obrigatorio">Gender</label>
-                    <select name="singleSelect" ng-model="maintainPersonCtrl.person.gender.idGender" ng-selected="maintainPersonCtrl.selectedItem">
-                        <option ng-repeat="item in maintainPersonCtrl.genders" value="{{item.idGender}}">{{item.description}}</option>
-                    </select>
-                </div>
-            </form>
-        </div>
+  <div class="widget-box">
+  	<div class="widget-header">
+  		<h4>{{maintainPersonCtrl.titulo}}</h4>
+
+  		<div class="widget-toolbar">
+  		</div>
+  	</div>
+
+    <div class="widget-body">
+  		<div class="widget-main" style="min-height: 300px;">
+  			<form name="maintainPersonCtrl.formPerson" class="form-horizontal" novalidate>
+  				<div class="form-group">
+  					<label for="name" class="col-md-3 blue bolder control-label obrigatorio">Name</label>
+  					<div class="col-md-4">
+  						<input type="text" class="form-control" maxlength="150" name="name" id="name" ng-model="maintainPersonCtrl.person.name" required capitalize>
+  					</div>
+  				</div>
+  				<div class="form-group">
+  					<label for="email" class="col-md-3 blue bolder control-label obrigatorio">E-mail</label>
+  					<div class="col-md-4">
+  					  <div class="input-group" class="col-md-4">
+  						  <input class="form-control input-mask-date col-md-4" type="text" name="email" id="email" ng-model="maintainPersonCtrl.person.email"/>
+  						  <span class="input-group-btn">
+  							  <button class="btn btn-sm btn-default" type="button">
+  								  <i class="ace-icon fa fa-envelope-o bigger-110"></i>
+  							  </button>
+  						  </span>
+  					  </div>
+  					</div>
+  				</div>
+  				<div class="form-group">
+  					<label for="phone" class="col-md-3 blue bolder control-label obrigatorio">Phone</label>
+  					<div class="col-md-4">
+  					  <div class="input-group" class="col-md-4">
+  						  <input class="form-control input-mask-date col-md-4" type="text" name="phone" id="phone" ng-model="maintainPersonCtrl.person.phone"/>
+  						  <span class="input-group-btn">
+  							  <button class="btn btn-sm btn-default" type="button">
+  								  <i class="ace-icon fa fa-phone bigger-110"></i>
+  							  </button>
+  						  </span>
+  					  </div>
+  					</div>
+  				</div>
+  				<div class="form-group">
+  					<label for="cpf" class="col-md-3 blue bolder control-label obrigatorio">CPF</label>
+  					<div class="col-md-4">
+  						<input type="text" class="form-control" maxlength="14" name="cpf" id="cpf" ng-model="maintainPersonCtrl.person.cpf" ui-br-cpfcnpj-mask required capitalize>
+  					</div>
+  				</div>
+  				<div class="form-group">
+  					<label for="birthDayDate" class="col-md-3 blue bolder control-label obrigatorio">BirthDay Date</label>
+  					<div class="col-md-4">
+  					  <div class="input-group" class="col-md-4">
+  						  <input class="form-control input-mask-date col-md-4" type="text" name="birthDayDate" id="birthDayDate" ng-model="maintainPersonCtrl.person.birthDayDate"/>
+  						  <span class="input-group-btn">
+  							  <button class="btn btn-sm btn-default" type="button">
+  								  <i class="ace-icon fa fa-calendar bigger-110"></i>
+  							  </button>
+  						  </span>
+  					  </div>
+  					</div>
+  				</div>
+  				<div class="form-group">
+  					<label for="login" class="col-md-3 blue bolder control-label obrigatorio">Login</label>
+  					<div class="col-md-4">
+  						<input type="text" class="form-control" maxlength="6" name="login" id="login" ng-model="maintainPersonCtrl.person.login" required>
+  					</div>
+  				</div>
+  				<div class="form-group">
+  					<label for="password" class="col-md-3 blue bolder control-label obrigatorio">Password</label>
+  					<div class="col-md-4">
+  						<input type="text" class="form-control" maxlength="6" name="password" id="password" ng-model="maintainPersonCtrl.person.password" required>
+  					</div>
+  				</div>
+  				<div class="form-group">
+  					<label for="permission" class="col-md-3 blue bolder control-label obrigatorio">Permission</label>
+  					<div class="col-md-4">
+  						<input type="text" class="form-control" maxlength="12" name="permission" id="permission" ng-model="maintainPersonCtrl.person.permission" required capitalize>
+  					</div>
+  				</div>
+  				<div class="form-group">
+  					<label for="gender" class="col-md-3 blue bolder control-label obrigatorio">Gender</label>
+  					<select name="singleSelect" ng-model="maintainPersonCtrl.person.gender.idGender" ng-selected="maintainPersonCtrl.selectedItem">
+  						<option ng-repeat="item in maintainPersonCtrl.genders" value="{{item.idGender}}">{{item.description}}</option>
+  					</select>
+  				</div>
+  			</form>
+  		</div>
+  	</div>    
+
         <footer class="panel-footer">
             <button type="submit" id="cancel" class="btn btn-info btn-sm" ng-click="maintainPersonCtrl.cadastrarPerson()" value="">
                 <i class="icon-ok bigger-110"></i>

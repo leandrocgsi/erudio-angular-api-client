@@ -26,45 +26,46 @@
                   				</div>
                 			</div>
 
-            			<div class="widget-body">
-              				<div class="widget-main" style="min-height: 300px;">
-                          <table ng-table="showPersonCtrl.tableParams" class="table table-bordered table-striped table-hover" >
-                              <tbody>
-                                  <tr ng-repeat="item in $data" scroll-to="" class="text-center">
-                                      <td class="text-center" data-title="'ID'" sortable="'idPerson'">{{item.idPerson}}</td>
-                                      <td class="text-center" data-title="getMessage('NAME')" sortable="'name'">{{item.name}}</td>
-                                      <td class="text-center" data-title="getMessage('E_MAIL')" sortable="'email'">{{item.email}}</td>
-                                      <td class="text-center" data-title="'Phone'" sortable="'phone'">{{item.phone}}</td>
-                                      <td class="text-center" data-title="'CPF'" sortable="'cpf'">{{item.cpf}}</td>
-                                      <td class="text-center" data-title="'Birthday'" sortable="'birthDayDate'">{{item.birthDayDate}}</td>
-                                      <td class="text-center" data-title="'Gender'" sortable="'gender.description'">{{item.gender.description}}</td>
-                                      <td class="text-center" data-title="'Actions'" ng-style="{ 'width': '16%' }">
-                                          <a class="blue" href="" ui-sref="app.private.managePerson.visualizar({person: item})">
-                                              <i class="ace-icon fa fa-search bigger-130" uib-tooltip="{{'SHOW_RESOURCE' | translate}}" class="btn btn-default"></i>
-                                          </a>
-                                          <a class="blue">
-                                              <i class="ace-icon fa fa-pencil bigger-130" uib-tooltip="{{'UPDATE_RESOURCE' | translate}}" class="btn  btn-default" ng-disabled="showPersonCtrl.disableChanges(item)" ng-click="showPersonCtrl.update(item)"></i>
-                                          </a>
-                                          <a class="red">
-                                              <i class="ace-icon fa fa-trash-o bigger-130" uib-tooltip="{{'REMOVE_RESOURCE' | translate}}" class="btn btn-default" ng-disabled="showPersonCtrl.disableChanges(item)" ng-click="showPersonCtrl.onDelete(item);" ></i>
-                                          </a>
-                                      </td>
-                                  </tr>
-                                  <tr ng-if="showPersonCtrl.tableParams.totalResults == 0">
-                                      <td colspan="3">{{'DATA_NOT_FOUND' | translate}}</td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                          <div class="col-md-12">
-                              <p class="pull-left">{{'AMOUNT' | translate}}: {{showPersonCtrl.total}}</p>
-                          </div>
-              			</div>
-            		</div>
-                </form>
-            </div>
+                			<div class="widget-body">
+                				<div class="widget-main" style="min-height: 300px;">
+                					<table ng-table="showPersonCtrl.tableParams" class="table table-bordered table-striped table-hover" >
+                					  <tbody>
+                						  <tr ng-repeat="item in $data" scroll-to="" class="text-center">
+                							  <td class="text-center" data-title="'ID'" sortable="'idPerson'">{{item.idPerson}}</td>
+                							  <td class="text-center" data-title="getMessage('NAME')" sortable="'name'">{{item.name}}</td>
+                							  <td class="text-center" data-title="getMessage('E_MAIL')" sortable="'email'">{{item.email}}</td>
+                							  <td class="text-center" data-title="'Phone'" sortable="'phone'">{{item.phone}}</td>
+                							  <td class="text-center" data-title="'CPF'" sortable="'cpf'">{{item.cpf}}</td>
+                							  <td class="text-center" data-title="'Birthday'" sortable="'birthDayDate'">{{item.birthDayDate}}</td>
+                							  <td class="text-center" data-title="'Gender'" sortable="'gender.description'">{{item.gender.description}}</td>
+                							  <td class="text-center" data-title="'Actions'" ng-style="{ 'width': '16%' }">
+                								  <a class="blue" href="" ui-sref="app.private.managePerson.visualizar({person: item})">
+                									  <i class="ace-icon fa fa-search bigger-130" uib-tooltip="{{'SHOW_RESOURCE' | translate}}" class="btn btn-default"></i>
+                								  </a>
+                								  <a class="blue">
+                									  <i class="ace-icon fa fa-pencil bigger-130" uib-tooltip="{{'UPDATE_RESOURCE' | translate}}" class="btn  btn-default" ng-disabled="showPersonCtrl.disableChanges(item)" ng-click="showPersonCtrl.update(item)"></i>
+                								  </a>
+                								  <a class="red">
+                									  <i class="ace-icon fa fa-trash-o bigger-130" uib-tooltip="{{'REMOVE_RESOURCE' | translate}}" class="btn btn-default" ng-disabled="showPersonCtrl.disableChanges(item)" ng-click="showPersonCtrl.onDelete(item);" ></i>
+                								  </a>
+                							  </td>
+                						  </tr>
+                						  <tr ng-if="showPersonCtrl.tableParams.totalResults == 0">
+                							  <td colspan="3">{{'DATA_NOT_FOUND' | translate}}</td>
+                						  </tr>
+                					  </tbody>
+                					</table>
+                					<div class="col-md-12">
+                						<p class="pull-left">{{'AMOUNT' | translate}}: {{showPersonCtrl.total}}</p>
+                					</div>
+                				</div>
+                			</div>
+                  </div>
+                </div>
+                <div class="form-actions left">
+                    <button type="submit" class="btn btn-info btn-sm" scroll-to="" ui-sref="app.private.managePerson.insert({person: {}})">{{'INSERT'| translate}}</button>
+                </div>
+              </div>
+            </form>
         </div>
-        <div class="form-actions left">
-            <button type="submit" class="btn btn-info btn-sm" scroll-to="" ui-sref="app.private.managePerson.insert({person: {}})">{{'INSERT'| translate}}</button>
-        </div>
-    </div>
 </section>
